@@ -1,5 +1,5 @@
 <?php 
-namespace Itsmill3rtime\Helpers\Providers;
+namespace Itsmill3rtime\Helpers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -12,6 +12,6 @@ class SimpleHelpersProvider extends ServiceProvider
      */
     public function register()
     {
-        include_once ('../helper_functions/loader.php');
+        include_once('loader.php');
     }
 }
