@@ -1,0 +1,22 @@
+{
+  "name": "itsmill3rtime/simple-helpers",
+  "description": "Helper functions to ease development and increase readability",
+  "authors": [
+    {
+      "name": "Jimmy Miller",
+      "email": "jmiller87@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "laravel/framework": ">=5.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Itsmill3rtime\\Helpers\\": "src/"
+    },
+    "files": [
+      "src/helper_functions/loader.php",
+    ]
+  }
+}
