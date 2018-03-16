@@ -27,7 +27,7 @@ Some functions include a final parameter called $loose. This if set to true will
 
 | Function | |
 | ------ | ------ |
-| not_null($vaule) | returns true if value is not null, false if is null |
+| not_null($value) | returns true if value is not null, false if is null |
 | is_false($value, $loose = false) | returns true if value is false, false if value is true |
 | not_false($value, $loose = false) | returns true if value is not false, false if value is false |
 | is_true($value, $loose = false) | returns true if value is true, false if value is false |
