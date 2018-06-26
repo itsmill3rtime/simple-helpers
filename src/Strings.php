@@ -28,18 +28,40 @@ if (function_exists('null_if_empty') === false) {
 if (function_exists('string_starts_with') === false) {
     function string_starts_with($haystack, $needle)
     {
-        $length = strlen($needle);
+        if (is_array($needle)) {
+            foreach ($needle as $single) {
+                $length = strlen($single);
+                if ((substr($haystack, 0, $length) === $single)) {
+                    return true;
+                }
+            }
+        } else {
+            $length = strlen($needle);
 
-        return (substr($haystack, 0, $length) === $needle);
+            return (substr($haystack, 0, $length) === $needle);
+        }
+
+        return false;
     }
 }
 
 if (function_exists('string_ends_with') === false) {
     function string_ends_with($haystack, $needle)
     {
-        $length = strlen($needle);
+        if (is_array($needle)) {
+            foreach ($needle as $single) {
+                $length = strlen($needle);
 
-        return $length === 0 ||
-            (substr($haystack, -$length) === $needle);
+                if ($length === 0 || (substr($haystack, -$length) === $needle)) {
+                    return true;
+                };
+            }
+        } else {
+            $length = strlen($needle);
+
+            return $length === 0 || (substr($haystack, -$length) === $needle);
+        }
+
+        return false;
     }
 }
