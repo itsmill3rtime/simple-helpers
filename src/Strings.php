@@ -24,3 +24,22 @@ if (function_exists('null_if_empty') === false) {
         return $value;
     }
 }
+
+if (function_exists('string_starts_with') === false) {
+    function string_starts_with($haystack, $needle)
+    {
+        $length = strlen($needle);
+
+        return (substr($haystack, 0, $length) === $needle);
+    }
+}
+
+if (function_exists('string_ends_with') === false) {
+    function string_ends_with($haystack, $needle)
+    {
+        $length = strlen($needle);
+
+        return $length === 0 ||
+            (substr($haystack, -$length) === $needle);
+    }
+}
